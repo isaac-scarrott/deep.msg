@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "aws-cdk-lib": "2.110.1",
-    "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sst": "2.39.5"
