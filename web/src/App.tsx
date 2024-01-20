@@ -1,12 +1,26 @@
-import { useState } from "react";
-import { Chat } from "./components/Chat1";
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, Router } from "@tanstack/react-router";
 
-function App() {
-  const [screenName, setScreenName] = useState(
-    localStorage.getItem("screenName"),
-  );
+import { routeTree } from "./routeTree.gen";
 
-  return <Chat screenName={screenName} />;
+import "./global.css";
+
+const router = new Router({ routeTree });
+
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
 }
 
-export default App;
+const rootElement = document.getElementById("root")!;
+
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>,
+  );
+}
