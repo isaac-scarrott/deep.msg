@@ -1,26 +1,22 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, Router } from "@tanstack/react-router";
+import { RouterProvider } from "@tanstack/react-router";
 
-import { routeTree } from "./routeTree.gen";
+import { router } from "./router";
 
 import "./global.css";
-
-const router = new Router({ routeTree });
-
-declare module "@tanstack/react-router" {
-  interface Register {
-    router: typeof router;
-  }
-}
+import { ReplicacheProvider } from "./context/replicache";
 
 const rootElement = document.getElementById("root")!;
 
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
+
   root.render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <ReplicacheProvider>
+        <RouterProvider router={router} />
+      </ReplicacheProvider>
     </StrictMode>,
   );
 }

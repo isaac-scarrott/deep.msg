@@ -5,6 +5,6 @@
     "noUncheckedIndexedAccess": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": "."
-  }
+    "baseUrl": ".",
+  },
 }

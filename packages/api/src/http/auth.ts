@@ -21,9 +21,9 @@ export const handler = AuthHandler({
         }
 
         if (!email) {
-          response.http({
-            status: 401,
-            body: { error: "No email provided" },
+          return response.http({
+            statusCode: 401,
+            body: JSON.stringify({ error: "No email provided" }),
           });
         }
 

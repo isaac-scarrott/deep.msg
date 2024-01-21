@@ -8,11 +8,11 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.114",
-    "@types/node": "^18.16.0",
-    "sst": "2.37.0",
-    "typescript": "^5.2.2"
+    "@types/node": "^18.16.0"
   },
   "dependencies": {
+    "@planetscale/database": "^1.14.0",
+    "drizzle-orm": "^0.29.3",
     "zod": "^3.21.4"
   }
 }
