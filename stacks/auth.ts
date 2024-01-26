@@ -8,7 +8,7 @@ function auth({ stack }: StackContext) {
 
   const auth = new SSTAuth(stack, "auth", {
     authenticator: {
-      handler: "packages/api/src/http/auth.handler",
+      handler: "packages/backend/src/http/auth.handler",
       bind: [parameters.GOOGLE_CLIENT_ID, secrets.GOOGLE_CLIENT_SECRET],
     },
   });

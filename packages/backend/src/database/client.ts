@@ -1,5 +1,5 @@
-import { drizzle } from "drizzle-orm/planetscale-serverless";
 import { connect } from "@planetscale/database";
+import { drizzle } from "drizzle-orm/planetscale-serverless";
 import { Config } from "sst/node/config";
 
 const connection = connect({

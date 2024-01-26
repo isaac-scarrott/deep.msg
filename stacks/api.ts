@@ -20,8 +20,10 @@ function api({ stack }: StackContext) {
       },
     },
     routes: {
-      "POST /replicache/pull": "packages/api/src/http/replicache/pull.handler",
-      "POST /replicache/push": "packages/api/src/http/replicache/push.handler",
+      "POST /replicache/pull":
+        "packages/backend/src/http/replicache/pull.handler",
+      "POST /replicache/push":
+        "packages/backend/src/http/replicache/push.handler",
     },
   });
 

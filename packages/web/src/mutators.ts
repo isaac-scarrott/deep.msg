@@ -1,13 +1,5 @@
 import { WriteTransaction } from "replicache";
-
-export type Message = {
-  readonly id: string;
-  readonly from: string;
-  readonly content: string;
-  readonly sort: number;
-};
-
-export type MessageUpdate = Partial<Message> & Pick<Message, "id">;
+import type { Message } from "@deepmsg/shared";
 
 export type M = typeof mutators;
 

@@ -1,0 +1,22 @@
+{
+  "name": "@deepmsg/backend",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind --stage ${SST_STAGE:=local} vitest",
+    "typecheck": "tsc --noEmit",
+    "db:push": "sst bind --stage ${SST_STAGE:=local} drizzle-kit push:mysql"
+  },
+  "devDependencies": {
+    "@deepmsg/shared": "workspace:*",
+    "@types/aws-lambda": "^8.10.114",
+    "@types/node": "^18.16.0",
+    "drizzle-kit": "^0.20.13"
+  },
+  "dependencies": {
+    "@planetscale/database": "^1.14.0",
+    "drizzle-orm": "^0.29.3",
+    "drizzle-zod": "^0.5.1",
+    "zod": "^3.21.4"
+  }
+}
